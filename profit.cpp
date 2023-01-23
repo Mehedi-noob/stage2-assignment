@@ -19,17 +19,8 @@ int maxProfit(int prices[], int n)
 
 int main()
 {
-    int prices[] = { 7, 1, 5, 6, 4 };
+    int prices[] = { 7, 1, 10, 6, 4 };
     int n = sizeof(prices) / sizeof(prices[0]);
-    if(1 <= n <= 105)
-    {
-        int max_profit = maxProfit(prices, n);
-        cout << max_profit << endl;
-    }
-    else
-    {
-        cout << "Array length has to be less than 106 and greater than 0";
-    }
 
     for(int j=0; j<n; j++)
     {
@@ -38,6 +29,15 @@ int main()
             cout << "each element value has to be less than 105 and greater than -1";
             return 0;
         }
+    }
+    if(1 <= n <= 105)
+    {
+        int max_profit = maxProfit(prices, n);
+        cout << max_profit << endl;
+    }
+    else
+    {
+        cout << "Array length has to be less than 106 and greater than 0";
     }
 
     return 0;
